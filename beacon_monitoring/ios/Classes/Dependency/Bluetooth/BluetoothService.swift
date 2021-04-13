@@ -20,7 +20,7 @@ class BluetoothService: NSObject {
 
     // MARK: - Private Properties
     private let bluetoothPermissionChecker: BluetoothPermissionCheckerProtocol
-    private let centralManager = CBCentralManager()
+    private let centralManager = CBCentralManager(options: [CBCentralManagerOptionShowPowerAlertKey: false])
 
     // MARK: - Instance Initialization
     init(bluetoothPermissionChecker: BluetoothPermissionChecker) {
